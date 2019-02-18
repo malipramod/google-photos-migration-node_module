@@ -21,7 +21,6 @@ let getAlbums = (authToken, nextPageToken = "") => {
  * @param {string} nextPageToken        Next Page Token
  */
 let getItemsAlbum = (album, authToken, length, nextPageToken = "") => {
-    console.log(length);
     let body = {
         "pageSize": constants.PAGESIZE,
         "albumId": album.id
@@ -47,8 +46,27 @@ let getItemsAlbum = (album, authToken, length, nextPageToken = "") => {
     });
 }
 
+/**
+ * 
+ * @param {string} albumName    Name of the album to create
+ * @param {string} authToken    AuthToken 
+ */
+let createAlbum = (albumName,authToken) =>{
+    let body = {
+        "album": {
+            "title": albumName
+        }
+    };
+    return axios.post(`${constants.GOOGLEPHOTOURL}albums`, body, {
+        headers: {
+            'Authorization': "Bearer " + authToken
+        }
+    });
+}
+
 
 module.exports = {
     getAlbums: getAlbums,
-    getItemsAlbum: getItemsAlbum
+    getItemsAlbum: getItemsAlbum,
+    createAlbum:createAlbum
 }
