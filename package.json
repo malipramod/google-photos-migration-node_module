@@ -1,0 +1,11 @@
+{
+  "name": "google-photos-migration",
+  "version": "1.0.0",
+  "description": "Google Photos APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pramod Mali",
+  "license": "ISC"
+}
