@@ -1,4 +1,4 @@
-let constant = require('../constants/constant');
+let constant = require('../../constants/constant');
 let album = require('../library/album');
 
 let migrateAlbum = (authToken, albumData) => {

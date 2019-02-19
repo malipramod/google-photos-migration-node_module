@@ -1,4 +1,4 @@
-let album = require('../library/album');
+let album = require('../modules/library/album');
 let constant = require('../constants/constant')
 
 let authToken = "ya29.Gl20BoFAPrCFDWTvPutaoogKehBvei80mVm84-nDX84fIMfdN_eTMWb_MCsppmigpBTnRRwOCxyIfoxp7CtFq0vua_0rSMZnAH2PWJU4c_gK5jEhzccuPo_G8x2dUmE";

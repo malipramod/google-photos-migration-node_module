@@ -1,4 +1,4 @@
-let constants = require('../constants/constant');
+let constants = require('../../constants/constant');
 let axios = require('axios');
 
 /**
