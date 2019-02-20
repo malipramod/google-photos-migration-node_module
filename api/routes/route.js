@@ -11,7 +11,11 @@ app.listen(port, function () {
     console.log(`Example app listening at ${port}`);
 });
 
-app.post('/', function (req, res) {   
-    console.log(req.body)
-    res.send("Hit");  
+app.post('/migrateAlbum', function (req, res) {
+    let data = migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems);
+    res.send(data);
 });
+
+app.get('/', (req, res) => {
+    res.sendFile('views/welcome.html', { root: __dirname });
+})
