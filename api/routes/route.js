@@ -12,7 +12,10 @@ app.listen(port, function () {
 });
 
 app.post('/migrateAlbum', function (req, res) {
-    migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems,function(data){
+    // migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems,function(data){
+    //     res.send(data);
+    // });
+    migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems,req.body.albumId).then((data)=>{
         res.send(data);
     });
 });
