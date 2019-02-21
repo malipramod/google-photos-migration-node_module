@@ -12,8 +12,9 @@ app.listen(port, function () {
 });
 
 app.post('/migrateAlbum', function (req, res) {
-    let data = migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems);
-    res.send(data);
+    migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems,function(data){
+        res.send(data);
+    });
 });
 
 app.get('/', (req, res) => {
