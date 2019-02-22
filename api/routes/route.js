@@ -11,11 +11,8 @@ app.listen(port, function () {
     console.log(`Example app listening at ${port}`);
 });
 
-app.post('/migrateAlbum', function (req, res) {
-    // migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems,function(data){
-    //     res.send(data);
-    // });
-    migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems,req.body.albumId).then((data)=>{
+app.post('/migrateAlbum', function (req, res) {    
+    migrateController.migratePhotos(req.headers.authorization, req.body.mediaItems,req.body.albumData).then((data)=>{
         res.send(data);
     });
 });
