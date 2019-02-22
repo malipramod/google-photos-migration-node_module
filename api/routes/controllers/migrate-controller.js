@@ -4,7 +4,6 @@ const axios = require('axios');
 const constants = require('../../config/constant');
 
 let migratePhotos = async (authToken, mediaItems, albumData) => {
-    let batchSize = constants.BATCHSIZE;
     let responses = {};
     let uploadTokens = {};
     uploadTokens.newMediaItems = [];
