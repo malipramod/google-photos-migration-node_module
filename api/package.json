@@ -1,0 +1,23 @@
+{
+  "name": "google-photos-migration-api",
+  "version": "1.0.0",
+  "description": "Google Photos Migration API in nodejs using express",
+  "main": "route.js",
+  "scripts": {
+    "start": "node route.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Google",
+    "Photos",
+    "Migration",
+    "API"
+  ],
+  "author": "Pramod Mali -- prmaodmaali@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
