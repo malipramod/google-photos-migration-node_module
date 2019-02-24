@@ -1,6 +1,6 @@
 const GOOGLEPHOTOURL = "https://photoslibrary.googleapis.com/v1/";
-const GOOGLEMIGRATIONAPILOCAL = "http://localhost:3000/";
-const GOOGLEMIGRATIONAPIHOSTED = "";
+const GOOGLEMIGRATIONAPILOCAL = "http://localhost:8080/";
+const GOOGLEMIGRATIONAPIHOSTED = "https://google-photos-migration.herokuapp.com/";
 
 const PAGESIZE = 100;
 module.exports = {

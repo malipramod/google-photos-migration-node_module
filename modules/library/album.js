@@ -2,7 +2,9 @@ let constants = require('../../constants/constant');
 let axios = require('axios');
 
 /**
- * Get All albums
+ * Get 20 albums per call, Provide nextPageToken to get next 20 items
+ * @param {string} authToken 
+ * @param {string} nextPageToken 
  */
 let getAlbums = (authToken, nextPageToken = "") => {
     return axios.get(`${constants.GOOGLEPHOTOURL}albums`, {
@@ -14,7 +16,7 @@ let getAlbums = (authToken, nextPageToken = "") => {
 }
 
 /**
- * 
+ * main method to get all items from Album
  * @param {object} album                     Album Data
  * @param {string} authToken                 Auth Token
  * @param {number} length                    Length of Album (album content/batch size)
@@ -30,6 +32,12 @@ let getAllItemsFromAlbum = async (album, authToken, length, nextPageToken = "") 
     return albumItems.flat();
 }
 
+/**
+ * Support method to get all items from Album
+ * @param {object} album 
+ * @param {string} authToken 
+ * @param {string} nextPageToken 
+ */
 function getItemsAlbumAPI(album, authToken, nextPageToken = "") {
     let body = {
         "pageSize": constants.PAGESIZE,
@@ -46,7 +54,7 @@ function getItemsAlbumAPI(album, authToken, nextPageToken = "") {
 }
 
 /**
- * 
+ * Creates album
  * @param {string} albumName    Name of the album to create
  * @param {string} authToken    AuthToken 
  */
@@ -63,6 +71,9 @@ let createAlbum = (albumName, authToken) => {
     });
 }
 
+/**
+ * Method to Flat arrays within array, as it is directory not supported in nodejs
+ */
 Object.defineProperty(Array.prototype, 'flat', {
     value: function (depth = 1) {
         return this.reduce(function (flat, toFlatten) {
@@ -71,6 +82,9 @@ Object.defineProperty(Array.prototype, 'flat', {
     }
 });
 
+/**
+ * Exports all modules
+ */
 module.exports = {
     getAlbums: getAlbums,
     getAllItemsFromAlbum: getAllItemsFromAlbum,

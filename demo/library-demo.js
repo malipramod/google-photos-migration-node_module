@@ -3,6 +3,9 @@ let constant = require('../constants/constant')
 
 let authToken = "ya29.Gl20BoFAPrCFDWTvPutaoogKehBvei80mVm84-nDX84fIMfdN_eTMWb_MCsppmigpBTnRRwOCxyIfoxp7CtFq0vua_0rSMZnAH2PWJU4c_gK5jEhzccuPo_G8x2dUmE";
 
+/**
+ * Demo that gets all albums
+ */
 function getAlbumsDemo() {
     album.getAlbums(authToken, "").then(
         (response) => {
@@ -14,6 +17,10 @@ function getAlbumsDemo() {
     );
 }
 
+/**
+ * Demo to get All Items from album
+ * @param {object} albumData 
+ */
 function getItemsAlbumsDemo(albumData) {
     let length = (Math.floor(albumData.mediaItemsCount / constant.PAGESIZE) + 1);
     album.getAllItemsFromAlbum(albumData, authToken, length, "").then((response) => {
@@ -21,6 +28,10 @@ function getItemsAlbumsDemo(albumData) {
     });
 }
 
+/**
+ * Creates album
+ * @param {string} albumName 
+ */
 function createAlbumDemo(albumName) {
     album.createAlbum(albumName, authToken).then(
         (response) => {
