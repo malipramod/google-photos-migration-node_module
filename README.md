@@ -5,8 +5,7 @@ Google Photos Migration Node Module
 ## How to install
 
 Install Google Photos Migration Node Module by following command:
-
-    npm i google-photos-migration
+**npm i google-photos-migration**
 
 ## Features
 
