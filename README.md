@@ -1,6 +1,6 @@
-# Google Photot Migration
+# Google Photos Migration
 
-Google Photos Migration Node Module
+Migrates Google Photos from one Google account to another.
 
 ## How to install
 
