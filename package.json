@@ -1,6 +1,6 @@
 {
   "name": "google-photos-migration",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Migrates Google Photos from one Google account to another.",
   "main": "index.js",
   "scripts": {
