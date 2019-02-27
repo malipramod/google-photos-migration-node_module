@@ -19,7 +19,6 @@ let getAlbums = (authToken, nextPageToken = "") => {
  * main method to get all items from Album
  * @param {object} album                     Album Data
  * @param {string} authToken                 Auth Token
- * @param {number} length                    Length of Album (album content/batch size)
  * @param {string} nextPageToken             Next Page Token
  */
 let getAllItemsFromAlbum = async (album, authToken, nextPageToken = "") => {
