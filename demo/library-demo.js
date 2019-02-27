@@ -22,8 +22,7 @@ function getAlbumsDemo() {
  * @param {object} albumData 
  */
 function getItemsAlbumsDemo(albumData) {
-    let length = (Math.floor(albumData.mediaItemsCount / constant.PAGESIZE) + 1);
-    album.getAllItemsFromAlbum(albumData, authToken, length, "").then((response) => {
+    album.getAllItemsFromAlbum(albumData, authToken, "").then((response) => {
         console.log(response.length);
     });
 }

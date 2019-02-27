@@ -22,8 +22,9 @@ let getAlbums = (authToken, nextPageToken = "") => {
  * @param {number} length                    Length of Album (album content/batch size)
  * @param {string} nextPageToken             Next Page Token
  */
-let getAllItemsFromAlbum = async (album, authToken, length, nextPageToken = "") => {
+let getAllItemsFromAlbum = async (album, authToken, nextPageToken = "") => {
     let albumItems = [];
+    let length = (Math.floor(album.mediaItemsCount / constant.PAGESIZE) + 1);
     for (let i = 0; i < length; i++) {
         let resp = await getItemsAlbumAPI(album, authToken, nextPageToken);
         albumItems.push(resp.mediaItems);
