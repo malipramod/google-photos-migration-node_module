@@ -10,7 +10,7 @@ let axios = require('axios')
  */
 let migrateAlbum = (srcAuthToken, destAuthToken, albumData) => {
     let length = (Math.floor(albumData.mediaItemsCount / constant.PAGESIZE) + 1);
-    return album.getAllItemsFromAlbum(albumData, srcAuthToken, length, "").then((response) => {
+    return album.getAllItemsFromAlbum(albumData, srcAuthToken, "").then((response) => {
         let body = {
             "mediaItems": response,
             "albumData": albumData
