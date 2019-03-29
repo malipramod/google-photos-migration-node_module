@@ -50,7 +50,7 @@ Get all items from an album.
 
 ``` JavaScript
     var googlePhotos = require('google-photos-migration');
-    googlePhotos.getAllItemsFromAlbum(albumData, authToken, length,nextPageToken);
+    googlePhotos.getAllItemsFromAlbum(albumData, authToken, nextPageToken);
 ```
 
 For More information please look into: demo/library-demo.js
